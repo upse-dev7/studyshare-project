@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="center-box">
+
+    <h2>Login</h2>
+
+    <form method="POST">
+        <input type="email" name="email" placeholder="Enter Email"><br><br>
+        <input type="password" name="password" placeholder="Enter Password"><br><br>
+
+        <button class="btn download">Login</button>
+    </form>
+
+    {% if message %}
+        <p class="error">{{message}}</p>
+    {% endif %}
+
+    {% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <div class="flash-message">
+      {{ messages[0] }}
+    </div>
+  {% endif %}
+{% endwith %}
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Materials</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="navbar">
+    <div>Study Materials</div>
+    <div>
+        <a href="/dashboard">Exit</a>
+        <a href="/logout">Logout</a>
+    </div>
+</div>
+
+<div class="container">
+
+<h2>Available Files</h2>
+
+{% if message %}
+<p class="success">{{message}}</p>
+{% endif %}
+
+{% for row in data %}
+
+<div class="card">
+    <b>{{row[1]}}</b><br>
+    Uploaded by {{row[2]}} on {{row[3]}} <br><br>
+
+    <a class="btn view" href="/uploads/{{row[1]}}" target="_blank">View</a>
+    <a class="btn download" href="/uploads/{{row[1]}}" download>Download</a>
+    <a class="btn delete" href="/delete/{{row[1]}}">Delete</a>
+</div>
+
+{% endfor %}
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Upload</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="navbar">
+    <div>Upload File</div>
+    <div>
+        <a href="/dashboard">Exit</a>
+        <a href="/materials">Materials</a>
+    </div>
+</div>
+
+<div class="container">
+
+<div class="card">
+    <h2>Upload Study Material</h2>
+    <p class="success">{{message}}</p>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file"><br><br>
+        <button class="btn download">Upload</button>
+    </form>
+</div>
+
+</div>
+
+</body>
+</html>

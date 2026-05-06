@@ -1,0 +1,117 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f0f2f5;
+    margin-top: 30px;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background: #4CAF50;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar a {
+    color: white;
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+/* Container */
+.container {
+    padding: 20px;
+}
+
+/* Cards */
+.card {
+    background: white;
+    padding: 15px;
+    margin: 15px auto;
+    width: 60%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Buttons */
+.btn {
+    padding: 6px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    margin: 5px;
+}
+
+.view { background: #2196F3; }
+.download { background: #4CAF50; }
+.delete { background: #f44336; }
+
+/* Center login box */
+.center-box {
+    width: 300px;
+    margin: 100px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Input fields */
+input {
+    width: 90%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Success message */
+.success {
+    color: green;
+    font-weight: bold;
+}
+
+/* Error message */
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+p {
+    text-align: center;
+}
+
+.flash-message {
+    color: white;
+    background-color: #ff4d4d;
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.logout-container {
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    height: 100vh;
+    padding-top: 120px;
+}
+
+.logout-message {
+    font-size: 35px;
+    color: rgb(13, 66, 48);
+    text-align: center;
+}
