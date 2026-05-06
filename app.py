@@ -84,7 +84,7 @@ def login():
             session["user"] = email
             return render_template("dashboard.html")
         else:
-            return render_template("login.html", massage = "Invalid Email or Password")
+            return render_template("login.html", message = "Invalid Email or Password")    # corrected the error
 
     return render_template("login.html")
 
