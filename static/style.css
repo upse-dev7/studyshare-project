@@ -1,27 +1,32 @@
 body {
     font-family: 'Segoe UI', sans-serif;
     background: #f0f2f5;
-    margin-top: 30px;
+    margin: 0;
+    padding-top: 70px;
 }
 
 /* Navbar */
 .navbar {
     position: fixed;
     top: 0;
-    z-index: 1000;
     width: 100%;
+    z-index: 1000;
     background: #4CAF50;
-    padding: 10px 20px;
+    padding: 15px 20px;
     box-sizing: border-box;
     color: white;
+
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .navbar a {
     color: white;
-    margin-left: 15px;
+    margin: 5px 10px;
     font-weight: bold;
+    text-decoration: none;
 }
 
 /* Container */
@@ -32,86 +37,131 @@ body {
 /* Cards */
 .card {
     background: white;
-    padding: 15px;
-    margin: 15px auto;
-    width: 60%;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin: 20px auto;
+
+    width: 90%;
+    max-width: 700px;
+
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+
+    box-sizing: border-box;
 }
 
 /* Buttons */
 .btn {
-    padding: 6px 12px;
-    border-radius: 5px;
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 6px;
     text-decoration: none;
     color: white;
     margin: 5px;
+    font-size: 14px;
 }
 
 .view { background: #2196F3; }
 .download { background: #4CAF50; }
 .delete { background: #f44336; }
 
-/* Center login box */
+/* Center login/register box */
 .center-box {
-    width: 300px;
-    margin: 100px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-/* Input fields */
-input {
     width: 90%;
-    padding: 8px;
-    border-radius: 5px;
+    max-width: 350px;
+
+    margin: 80px auto;
+    background: white;
+
+    padding: 25px;
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+
+    box-sizing: border-box;
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    padding: 10px;
+
+    margin: 10px 0;
+
+    border-radius: 6px;
     border: 1px solid #ccc;
+
+    box-sizing: border-box;
 }
 
-/* Success message */
-.success {
-    color: green;
-    font-weight: bold;
-}
-
-/* Error message */
-.error {
-    color: red;
-    font-weight: bold;
-}
-
+/* Headings */
 h1 {
     text-align: center;
     color: #333;
 }
 
+/* Paragraphs */
 p {
     text-align: center;
+}
+
+/* Messages */
+.success {
+    color: green;
+    font-weight: bold;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
 }
 
 .flash-message {
     color: white;
     background-color: #ff4d4d;
-    padding: 10px;
+    padding: 12px;
     text-align: center;
-    margin: 10px;
-    border-radius: 5px;
-    font-size: 18px;
+    margin: 10px auto;
+    border-radius: 6px;
+    width: 90%;
+    max-width: 500px;
 }
 
+/* Logout */
 .logout-container {
     display: flex;
     justify-content: center;
-    align-items:flex-start;
-    height: 100vh;
+    align-items: flex-start;
+
+    min-height: 100vh;
+
     padding-top: 120px;
 }
 
 .logout-message {
-    font-size: 35px;
+    font-size: 32px;
     color: rgb(13, 66, 48);
     text-align: center;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 95%;
+    }
+
+    .logout-message {
+        font-size: 24px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
 }
